@@ -31,6 +31,4 @@ Get-OGRotations
 ```
 
 ## Thank you for helping :
-[PS Script to publish Nuget Package by PureKrome](https://duckduckgo.com).
-
-<https://gist.github.com/PureKrome/90a1587ea2b6c4f51269>
+[PS Script to publish Nuget Package by PureKrome](https://gist.github.com/PureKrome/90a1587ea2b6c4f51269).
