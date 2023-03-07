@@ -2,6 +2,17 @@
 
 
 # Usage:
+```powershell
+Set-OGAuthToken -apiToken $token
+
+
+$scheduleId = (Get-OGSchedules)[0].id
+Set-OGSchedule -scheduleId $scheduleId
+
+(Get-OGOnCall).onCallParticipants.name
+Get-OGRotations
+```
+
 ## Get List of Schedules 
 ```powershell
     Set-OGAuthToken -apiToken 'TOKEN'
