@@ -5,6 +5,7 @@ $script:OpsGenieBaseUri = "https://api.eu.opsgenie.com/v2"
 $script:OpsGenieInvokeHeaders = @{
     ContentType = "application/json"
 } 
+$script:OpsGenieScheduleId = $null
 
 #Import Module Functions
 Get-ChildItem -Path $PSScriptRoot\functions -Recurse -File | Where-object -Filter { -not $PSItem.Name.StartsWith("dev_")} | ForEach-Object -Process {

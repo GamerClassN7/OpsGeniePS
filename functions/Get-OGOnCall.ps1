@@ -2,17 +2,17 @@ function Get-OGOnCall{
     [cmdletbinding()]
     param (
         [Nullable[DateTime]] $Date = $null,
-        [Parameter(Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName)]
-        [Nullable[String]] $ScheduleId = $null
+        [Parameter(Mandatory=$false)]
+        [String] $ScheduleId = $null
     )
     Begin {
         $uri = "$script:OpsGenieBaseUri/schedules/{scheduleId}/on-calls"
     }
     Process {
-        if ($null -eq $ScheduleId){
+        if ([string]::IsNullOrEmpty($ScheduleId)){
             $ScheduleId = $script:OpsGenieScheduleId;
         }
-
+        
         $tempUri = $uri -replace "{scheduleId}", $ScheduleId
 
         if ($null -ne $Date) {
